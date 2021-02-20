@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int Fibonacci(int);// 1,1,2,3,5,8...
 int main(void){
     int n;

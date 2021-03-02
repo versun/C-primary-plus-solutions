@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int create_datas(int rows,int cols,double arr[rows][cols]){
     for(int i=0; i<rows; i++){
         printf("Ready to create the %i arr!\n",i);

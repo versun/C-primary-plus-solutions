@@ -1,6 +1,5 @@
 #include <stdio.h>
 #define DENBA 150
-
 int main(void){
     int friends=5;
     int weeks=0;

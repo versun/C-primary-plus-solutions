@@ -1,7 +1,6 @@
 #include <stdio.h>
 #define GALLON_TO_LITRE 3.785
 #define MILE_TO_KM 1.609
-
 int main(void){
     float range,oil;
     printf("Input the range you traveled(mile):");

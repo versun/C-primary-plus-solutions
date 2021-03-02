@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int Temperatures(double fahrenheit);
 int main(void){
     double fahrenheit;

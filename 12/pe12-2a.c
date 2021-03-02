@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include "pe12-2a.h"
-int get(char *,char *);
+int get(char *,char *,int);
 int set_mode(int m)
 {
+    pre_mode = mode;
     mode = m;
     return 0;
 }
@@ -11,20 +12,28 @@ int get_info()
 {
     if(mode == 0)
     {
-        get("kilomteres","liters");
+        get("kilomteres","liters",0);
     }else if(mode == 1)
     {
-        get("miles","gallons");
+        get("miles","gallons",0);
     }else if(mode == -1){
         return 0;
     }else{
-        puts("Invalid mode specified. Mode 1(US) used.");
-        mode = 1;
-        get("miles","gallons");
+        printf("Invalid mode specified."); 
+        mode = pre_mode;
+
+        get("miles","gallons",1);
     }
     return 0;
 }
-int get(char *s,char *s2){
+int get(char *s,char *s2,int invalid){
+    if(invalid){
+        if(mode){
+            printf("Mode 1(US) used.\n");
+        }else{
+            printf("Mode 0(EU) used.\n");
+        }
+    }
     printf("Enter distance traveled in %s: ",s);
     scanf("%lf",&distance);
     printf("Enter fuel consumed in %s: ",s2);

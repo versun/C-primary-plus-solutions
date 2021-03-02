@@ -1,5 +1,6 @@
 // pe12-2a.h
 static int mode;
+static int pre_mode;
 static double distance;
 static double fuel;
 static double result;

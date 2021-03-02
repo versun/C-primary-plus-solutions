@@ -1,7 +1,4 @@
-// pe12-2a.h
-static int mode;
-static double distance;
-static double fuel;
-static double result;
+// pe12-3a.h
+int check_mode(int *,int);
 int get_info(int,double*,double*);
 int show_info(int,double,double);

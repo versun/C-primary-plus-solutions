@@ -1,20 +1,25 @@
 #include <stdio.h>
 #include <string.h>
-#include "pe12-2a.h"
+#include "pe12-3a.h"
 int get(char *,char *,double*,double*);
+int check_mode(int *mode,int pre_mode){
+    if(*mode>1){
+        puts("Invalid mode specified. ");
+        *mode = pre_mode;
+        if(*mode)
+            printf("Mode 1(US) used.\n");
+        else
+            printf("Mode 0(EU) used.\n");
+    }
+    return 0;
+}
 int get_info(int mode, double *distance, double *fuel)
 {
     if(mode == 0)
     {
-        get("kilomteres","liters",distance, fuel);
+        get("kilomteres","liters",distance,fuel);
     }else if(mode == 1)
     {
-        get("miles","gallons",distance,fuel);
-    }else if(mode == -1){
-        return 0;
-    }else{
-        puts("Invalid mode specified. Mode 1(US) used.");
-        mode = 1;
         get("miles","gallons",distance,fuel);
     }
     return 0;

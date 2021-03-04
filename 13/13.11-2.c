@@ -33,5 +33,7 @@ int main(int argc, char*argv[])
     }else{
         puts("Write success!");
     }
+    fclose(source);
+    fclose(target);
     return 0;
 }
